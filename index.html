@@ -152,101 +152,56 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-静态Hexo博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+      <a class="article-title" href="/2020/05/05/%E9%9D%99%E6%80%81Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">静态Hexo博客搭建</a>
     </h1>
   
 
         
-        <a href="/2020/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-05-05T05:21:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
+        <a href="/2020/05/05/%E9%9D%99%E6%80%81Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2020-05-05T14:51:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
+        <h3 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h3><h4 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h4><p>因为Hexo是通过Node.js生成的，所以首先需要根据自己的操作系统版本<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载</a>并安装Node.js。<br>根据步骤提示进行操作后，在cmd中输入命令：<br><code>node -v</code><br>如果能正确显示Node.js版本，则说明安装成功（本人使用的版本为<strong>v10.15.3</strong>）。</p>
+<h4 id="2-通过npm安装Hexo框架"><a href="#2-通过npm安装Hexo框架" class="headerlink" title="2. 通过npm安装Hexo框架"></a>2. 通过npm安装Hexo框架</h4><p>Node.js安装成功后，同时会自动安装一个包管理器，称为npm（Node Package Manager）。</p>
+<blockquote>
+<p>什么是npm？<br>npm是一个包管理器，发布者将自己的代码发布（npm publish）到代码仓库（registry），使用者将自己需要的包写入<strong>package.json</strong>文件中，到代码仓库中把代码下载（npm install）下来。</p>
+</blockquote>
+<p>安装：<code>npm install -g hexo-cli</code><br>查看版本：<code>hexo -v</code></p>
+<blockquote>
+<p>由于npm代码仓库的服务器在国外，由于Great Firewall的缘故，下载速度可能不尽如人意，这时你可以使用淘宝的npm代码仓库，通过npm安装cnpm：<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>安装成功后，可以通过以下命令查看cnpm版本：<br><code>cnpm -v</code><br>通过cnpm来操作下载速度会得到很大提升，但包的版本不一定是最新的。</p>
+</blockquote>
+<hr>
+<h3 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h3><h4 id="1-创建目录"><a href="#1-创建目录" class="headerlink" title="1. 创建目录"></a>1. 创建目录</h4><p>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，我的是<code>Hexo</code>，在此目录下操作。</p>
+<h4 id="2-初始化博客"><a href="#2-初始化博客" class="headerlink" title="2. 初始化博客"></a>2. 初始化博客</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+<h4 id="3-新建文章"><a href="#3-新建文章" class="headerlink" title="3. 新建文章"></a>3. 新建文章</h4><p><code>hexo new &quot;BlogName&quot;</code>（BlogName是你的文章名称）<br>会在<code>source/_posts</code>目录下生成BlogName.md文件，可以vim或其他Markdown编辑器进行修改。</p>
+<h4 id="4-生成博客静态文件"><a href="#4-生成博客静态文件" class="headerlink" title="4. 生成博客静态文件"></a>4. 生成博客静态文件</h4><p><code>hexo g</code>（g代表generate），生成博客<strong>静态文件</strong><br>每次修改文章后，都需要通过<code>hexo clean</code>清理一下，<br>然后通过<code>hexo g</code>重新生成，<br>最后也不要忘了通过<code>hexo s</code>重新启动Hexo。</p>
+<h4 id="5-启动博客"><a href="#5-启动博客" class="headerlink" title="5. 启动博客"></a>5. 启动博客</h4><p><code>hexo s</code>（s代表server，默认端口号是<strong>4000</strong>）</p>
+<h4 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6. 更换主题"></a>6. 更换主题</h4><p>将需要更换的主题下载并解压缩到<code>theme/yourThemeName</code>目录下，yourThemeName是你给主题取的名字，<br>如我用的主题是[yilia]( <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia )，只需要解压缩到<code>Hexo/themes/yilia目录下即可,
+当然你也可以直接在</code>Hexo<code>目录下执行</code>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<code>，
+解压完成后，修改_config.yaml文件中的</code>theme<code>属性，默认是</code>landscape<code>，修改为</code>yilia`：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: yilia                          #注意：“theme:”后要带一个空格</span><br></pre></td></tr></table></figure>
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
+<p>每次修改主题后，都需要通过<code>hexo clean</code>清理一下，<br>然后通过<code>hexo g</code>重新生成，<br>最后也不要忘了通过<code>hexo s</code>重新启动Hexo。</p>
+<hr>
+<h3 id="服务器部署"><a href="#服务器部署" class="headerlink" title="服务器部署"></a>服务器部署</h3><h4 id="（一）-本地-github-io-白嫖部署"><a href="#（一）-本地-github-io-白嫖部署" class="headerlink" title="（一） 本地 + github.io 白嫖部署"></a>（一） 本地 + github.io 白嫖部署</h4><h5 id="1-生成github-io仓库"><a href="#1-生成github-io仓库" class="headerlink" title="1. 生成github.io仓库"></a>1. 生成github.io仓库</h5><p>首先注册并登录<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>，创建新public仓库，仓库名称<strong>一定要是</strong>：<br><code>YourGitHubName.github.io</code>（YourGitHubName是<strong>你的</strong>GitHub昵称，<strong>大小写敏感！</strong>）</p>
+<h5 id="2-本地安装Hexo的git部署插件"><a href="#2-本地安装Hexo的git部署插件" class="headerlink" title="2. 本地安装Hexo的git部署插件"></a>2. 本地安装Hexo的git部署插件</h5><p>在Hexo的目录下，输入<code>npm install --save hexo-deployer-git</code>，会报一个peerDependencies WARNING，可以忽略。</p>
+<h5 id="3-本地修改-config-yaml文件"><a href="#3-本地修改-config-yaml文件" class="headerlink" title="3. 本地修改_config.yaml文件"></a>3. 本地修改_config.yaml文件</h5><p>在Hexo目录下，找到_config.yaml文件，在#Deployment做如下修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:  </span><br><span class="line">	type: git</span><br><span class="line">	repo: https:&#x2F;&#x2F;github.com&#x2F;DragonBaby308&#x2F;DragonBaby308.github.io.git 		#你的github.io的网址  	</span><br><span class="line">	branch: master				#“type:”、“repo:”和“branch:”后都要带一个空格</span><br></pre></td></tr></table></figure>
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/05/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-05T05:15:16.257Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h5 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h5><p><code>hexo d</code><br>部署成功后，浏览器输入<code>YourGitHubName.github.io</code>即可访问，其中YourGitHubName是<strong>你的</strong>GitHub昵称，且<strong>大小写敏感</strong></p>
+<h5 id="5-写文章-amp-发布"><a href="#5-写文章-amp-发布" class="headerlink" title="5. 写文章 &amp; 发布"></a>5. 写文章 &amp; 发布</h5><p>和本地一致，都是<code>hexo new &quot;yourArticle&quot;</code>后<code>hexo clean &amp;&amp; hexo d - g</code>。</p>
 
       
 
@@ -259,7 +214,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/05/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/05/%E9%9D%99%E6%80%81Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">展开全文 >></a>
         </p>
       
 
