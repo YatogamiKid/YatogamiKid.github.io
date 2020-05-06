@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>静</title>
+  <title>轻云出月</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="静">
+<meta property="og:title" content="轻云出月">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="静">
+<meta property="og:site_name" content="轻云出月">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Yatogami Kid">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="静" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="轻云出月" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -81,9 +81,9 @@
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/3123261" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
 			</div>
 		</nav>
@@ -122,9 +122,9 @@
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/3123261" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
 				</div>
 			</nav>
@@ -151,6 +151,85 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-2020-5-6-Java课程作业" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/06/2020-5-6-Java%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/">2020.5.6 Java课程作业</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/06/2020-5-6-Java%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/" class="archive-article-date">
+  	<time datetime="2020-05-06T07:40:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="题一"><a href="#题一" class="headerlink" title="题一"></a>题一</h3><p>利用Scanner类编程实现键盘输入，比如输入一个字符串“china”。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> ch5p2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScannerDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">"Please input a string: "</span>);</span><br><span class="line">        Scanner str = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">"The string is :"</span> + str.next());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h3><p>从键盘输入读取一串字符串。</p>
+<p>运行截图：</p>
+<p><img src="http://m.qpic.cn/psc?/V12F7RNV1K4Tjo/gZJkV0R4*Tt*yk3U.9dESu2ef0QYmC4MAWzylv4q0PNX7Llxh0PoH*y*pnB*pUyYi.tEAzytrFvuHccTxRxg3Q!!/mnull&bo=.AHBAPgBwQADCSw!&rf=photolist&t=5" alt="Scanner运行截图1"></p>
+<p>缺点是 Scanner类当遇到空格输入时自动结束读取。</p>
+<p><img src="http://m.qpic.cn/psc?/V12F7RNV1K4Tjo/gZJkV0R4*Tt*yk3U.9dESgWmz1czNgY5M0ERmH5S956YlqN.xFBLjCipa09lxJEobSL7reYwz*33VHDGyWmm1A!!/mnull&bo=4AG*AOABvwADCSw!&rf=photolist&t=5" alt="Scanner运行截图2"></p>
+<hr>
+<h3 id="题二"><a href="#题二" class="headerlink" title="题二"></a>题二</h3><p>请利用BufferedReader类来实现从键盘输入功能。</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> ch5p2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferReaderDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        BufferedReader buffer = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br><span class="line">        System.out.println(<span class="string">"Please input a string: "</span>);</span><br><span class="line">        String text = buffer.readLine();</span><br><span class="line">        System.out.println(<span class="string">"The string is :"</span> + text);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现功能-1"><a href="#实现功能-1" class="headerlink" title="实现功能"></a>实现功能</h3><p>从键盘输入读取一串字符串。</p>
+<p>运行截图：</p>
+<p><img src="http://m.qpic.cn/psc?/V12F7RNV1K4Tjo/gZJkV0R4*Tt*yk3U.9dEStbuZXh.cGlSlO8Q4hCW0.WV3Nb6A9gUxtRqIwchBr8D2jxPolHHM5Vcoci3eWBpxA!!/mnull&bo=9wHEAPcBxAADCSw!&rf=photolist&t=5" alt="BufferedReader运行截图"></p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Scanner类在读取字符串时只能读取到空格前，空格后的内容不再读取，而BufferedReader类弥补了当输入的内容包含空格时，Scanner不能完整获得完整字符串的缺点。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/06/2020-5-6-Java%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-静态Hexo博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
